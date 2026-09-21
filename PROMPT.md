@@ -18,6 +18,10 @@ Existing starting points are [Safe refactoring](skills/safe-refactoring/SKILL.md
 
 ## Research and selection
 
+Start from established engineering practices supported by reputable authors, documented use in real projects, maintainer guidance, or credible recognition. Investigate the practice before deciding the skill's instructions and scope. The library's purpose is to extract and teach supported patterns; do not invent a workflow and then attach prestigious references to it.
+
+Trace each skill's core recommendations to material actually examined. Identify the established technique by its usual name where one exists. A descriptive skill name is a packaging choice, not evidence that a newly named pattern is established. Record adaptations for coding agents and original synthesis explicitly in the extraction notes, and keep them distinguishable from what the sources prescribe. Describe adoption or reputation only to the extent supported by evidence.
+
 Prefer original papers, author explanations, maintainer documentation, and direct award or survey records. Record who recommends a source, what they recommend, and any relevant date or scope. Keep formal recognition, satisfaction evidence, and documented practice distinguishable. Practitioner material without independent recognition can remain a clearly labeled candidate.
 
 Read the material needed to support the proposed skill. Keep source claims separate from our own synthesis. Be precise about whether we examined a full paper, selected chapters, public excerpts, documentation, or actual code at a particular revision. Do not imply a full book review or codebase audit when none occurred.
