@@ -1,8 +1,8 @@
 # UI and UX design sources
 
-Research pass: **2026-10-07**. Purpose: find text-first practitioner sources for future skills about screen content, layout, forms, mobile navigation, onboarding, copy, accessibility, playful products and design review. Extracted so far: [Design simple forms](../skills/design-simple-forms/SKILL.md); see the extraction notes at the end.
+Research pass: **2026-10-07**. Purpose: find text-first practitioner sources for future skills about screen content, layout, forms, mobile navigation, onboarding, copy, accessibility, playful products and design review. Extracted so far: [Design simple forms](../skills/design-simple-forms/SKILL.md) and [Decide screen content and hierarchy](../skills/decide-screen-content-and-hierarchy/SKILL.md); see the extraction notes at the end.
 
-This map follows the conventions of [SOURCES.md](../SOURCES.md), which links here. IDs `U01`–`U86` are stable. A row without a skill link has not been extracted yet.
+This map follows the conventions of [SOURCES.md](../SOURCES.md), which links here. IDs `U01`–`U96` are stable. A row without a skill link has not been extracted yet.
 
 ## How this was checked
 
@@ -164,6 +164,23 @@ Weaker for agents: **Material 3** and **Apple HIG** (JS-rendered; use the Androi
 | U84 | [Designing a Streak System](https://www.smashingmagazine.com/2026/02/designing-streak-system-ux-psychology/) — Victor Ayomipo (Smashing) | Article · 9 | **Practice, lower credibility.** Author has a short track record. | Freezes, a grace window, decay instead of a hard reset, and kind copy when a streak breaks. | Free | Feb 2026 | Opened |
 | U85 | [Octalysis](https://yukaichou.com/gamification-examples/octalysis-complete-gamification-framework/) — Yu-kai Chou | Framework · 9 | **Weak.** Mostly self-promotion with no independent evidence. Use only its "white hat / black hat" vocabulary. | "Black hat" drives: scarcity, unpredictability, avoiding loss. | Free | — | Opened |
 
+## Screen content and how much people read
+
+Added 2026-10-07 for the screen content and hierarchy skill.
+
+| ID | Source and people | Type · areas | Why credible | Example rules (paraphrased) | Access | Date / status | Checked |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| U87 | [How Little Do Users Read?](https://www.nngroup.com/articles/how-little-do-users-read/) — Jakob Nielsen, NN/g | Research article · 5, 6 | **Research.** Logs from 25 users and about 45,000 page views. | On an average page people read at most 28% of the words, and 20% is more likely. Extra text gets read even less. | Free | 2008 (data from 2005); figures dated, direction confirmed by later work | Opened |
+| U88 | [How Users Read on the Web](https://www.nngroup.com/articles/how-users-read-on-the-web/) and [Concise, SCANNABLE, and Objective](https://www.nngroup.com/articles/concise-scannable-and-objective-how-to-write-for-the-web/) — Jakob Nielsen et al., NN/g | Research article · 5, 6 | **Research.** 1997 study with 51 users. | 79% of users scanned. Rewriting text to be concise, scannable and objective gave large usability gains, the most when all three were combined. | Free | 1997; old single-site study | Opened |
+| U89 | [Inverted Pyramid](https://www.nngroup.com/articles/inverted-pyramid/) — NN/g | Article · 6, 5 | **Practice.** Cites behaviour research. | Put the conclusion first, then supporting detail. Start headings, paragraphs and sentences with the words that carry information. | Free | 2018 | Opened |
+| U90 | [Reading Content on Mobile Devices](https://www.nngroup.com/articles/mobile-content/) — Kate Moran, NN/g | Research article · 2, 5 | **Research.** About 276 participants. | Comprehension on phones matched desktop. Hard text was read slightly slower. Keep it brief anyway, and test complex content on phones. | Free | Dec 2016 | Opened |
+| U91 | [Defer Secondary Content When Writing for Mobile Users](https://www.nngroup.com/articles/defer-secondary-content-for-mobile/) — NN/g | Article · 2, 5 | **Research.** Qualitative testing. | The first screen holds only what the main point needs. Specs, bios and references go behind clearly labelled links. | Free | 2011 | Opened |
+| U92 | [5 Principles of Visual Design in UX](https://www.nngroup.com/articles/principles-visual-design/) — NN/g | Article · 5 | **Practice.** | Scale, visual hierarchy, balance, contrast and Gestalt grouping. Don't lower text contrast for looks. | Free | 2020, reviewed 2026 | Opened |
+| U93 | [Cards: UI-Component Definition](https://www.nngroup.com/articles/cards-component/) — NN/g | Article · 5, 8 | **Practice.** | Cards suit browsing mixed content. For searching or comparing similar items, lists scan faster. | Free | 2016 | Opened |
+| U94 | [Mobile First Is NOT Mobile Only](https://www.nngroup.com/articles/mobile-first-not-mobile-only/) — NN/g | Research article · 2 | **Research.** Same study as U21. | Don't copy mobile hiding patterns, like a hamburger menu, onto desktop. Hidden navigation hurt desktop use even more. | Free | 2016 | Opened |
+| U95 | [Mobile First](https://www.lukew.com/ff/entry.asp?933) — Luke Wroblewski | Article · 2, 1 | **Practice.** Originator of the mobile-first approach. | The small screen forces focus: keep only the data and actions that matter most. | Free | 2009; principle holds | Opened |
+| U96 | [Priority Guides: A Content-First Alternative to Wireframes](https://alistapart.com/article/priority-guides-a-content-first-alternative-to-wireframes/) — Heleen van Nues & Ralph Overkamp (A List Apart) | Article · 1, 5 | **Practice.** Agency practice described with a worked process. | List a screen's content in one column, ranked by importance, using real copy, before any layout. The order stays the same on every screen size. | Free | May 2018 | Opened |
+
 ## Ranking for turning into agent-readable guidance
 
 This is a judgement about how directly a source turns into rules an agent can apply. It is not a measure of quality.
@@ -218,7 +235,7 @@ Decisions (2026-10-07):
 
 | Proposed skill | Scope | Main sources |
 | --- | --- | --- |
-| **decide-screen-content-and-hierarchy** | Decide what a screen shows, what goes in a second layer, and how size, weight, spacing and grouping express priority. | U02–U08, U26, U31, U60–U66, U16, U69 |
+| [**decide-screen-content-and-hierarchy**](../skills/decide-screen-content-and-hierarchy/SKILL.md) | Decide what a screen shows, what goes in a second layer, and how size, weight, spacing and grouping express priority. | U02–U08, U16, U17, U21, U26, U28, U60–U66, U69, U87–U96 |
 | **design-mobile-layout-and-navigation** | Choose a navigation pattern, place actions within reach, and size and space targets for phones. | U18–U24, U25, U27–U29, U30, U35 |
 | [**design-simple-forms**](../skills/design-simple-forms/SKILL.md) | Cut and order questions, label and size inputs, set defaults and HTML attributes, and handle validation and errors. | U36–U44, U86, U25 |
 | **write-interface-copy** | Write button labels, errors, empty-state text and short instructions; put key words first; set tone. | U04, U45–U50, U57, U61 |
@@ -272,3 +289,51 @@ Pages were read through a fetch summariser on 2026-10-07. Key quotes were checke
 - Local links resolve.
 
 This is structural validation only. Whether the skill improves real form work remains to be seen in use.
+
+### decide-screen-content-and-hierarchy (2026-10-07)
+
+[Decide screen content and hierarchy](../skills/decide-screen-content-and-hierarchy/SKILL.md), with a [type and spacing reference](../skills/decide-screen-content-and-hierarchy/references/type-and-spacing.md).
+
+**Primary sources:**
+- **U02–U05:** NN/g on progressive disclosure, recognition, information scent and cognitive load.
+- **U61–U62:** NN/g on scanning, hierarchy and proximity.
+- **U87–U91:** how much people read, and mobile content.
+- **U96:** priority guides.
+
+**Supporting sources:**
+- U07 (Hick's, Tesler's and Miller's law pages)
+- U08 Tognazzini
+- U16 Refactoring UI, read through the Medium RSS feed
+- U17 Kennedy
+- U21 and U94, hidden navigation
+- U26 and U28, WCAG contrast and reflow
+- U60, U63–U66 and U69, typography and spacing numbers
+- U92–U93 and U95
+- the GOV.UK button page, for one main call to action per page
+- the Apple HIG layout page, read through JSON
+
+Pages were read through a fetch summariser. The 28% figure in U87 was checked against the page text directly. Refactoring UI's exact pixel and weight figures were not spot-checked against the original images, so the skill states those rules without the numbers.
+
+**Disagreements kept visible:**
+- Line length: 45–90 characters, 45–75 characters, or at most 60ch.
+- Body size: 14–16px or 15–25px.
+- Line height: 1.2–1.45, 1.5 or 1.65.
+- Scale ratio: 1.2–1.25 or 1.5 and up.
+- Density: Refactoring UI says technical audiences value it, while Kennedy says to double the whitespace.
+
+**Our synthesis:**
+- The three-way split into stays, moves and goes.
+- The "reasonable default" column in the reference file, including 1.1–1.25 line height for headings and a 60–70ch cap. These come from the sources' ranges but are not stated by any one source.
+- The headings-only read as a check, adapted from NN/g's layer-cake finding.
+
+**Limitations:**
+- U88's data is from 1997, U87's from 2005, and U91's from 2011.
+- Laws of UX pages cite origins but report no interface studies.
+- No NN/g article on information density was found.
+
+**Validation:**
+- The skill validator passed.
+- All external links returned HTTP 200 on 2026-10-07, except the Refactoring UI Medium article. Medium returns 403 to automated requests, and the article's content was confirmed through the publication's RSS feed.
+- Local links resolve.
+
+This is structural validation only.
