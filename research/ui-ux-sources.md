@@ -1,8 +1,8 @@
 # UI and UX design sources
 
-Research pass: **2026-10-07**. Purpose: find text-first practitioner sources for future skills about screen content, layout, forms, mobile navigation, onboarding, copy, accessibility, playful products and design review. No skills have been extracted yet.
+Research pass: **2026-10-07**. Purpose: find text-first practitioner sources for future skills about screen content, layout, forms, mobile navigation, onboarding, copy, accessibility, playful products and design review. Extracted so far: [Design simple forms](../skills/design-simple-forms/SKILL.md); see the extraction notes at the end.
 
-This map follows the conventions of [SOURCES.md](../SOURCES.md), which links here. IDs `U01`–`U85` are stable. A row without a skill link has not been extracted yet.
+This map follows the conventions of [SOURCES.md](../SOURCES.md), which links here. IDs `U01`–`U86` are stable. A row without a skill link has not been extracted yet.
 
 ## How this was checked
 

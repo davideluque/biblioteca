@@ -56,7 +56,8 @@ Start with one thing per page: one question, one decision, or one piece of infor
 - **Several choices:** checkboxes, with the hint "Select all that apply".
 - **Long lists:** first try to ask a question that narrows the options. A select is a last resort: people struggle to open, scroll and close it on phones. For long known lists such as countries, an accessible autocomplete works better. Avoid `<select multiple>`.
 - **Dates people know** (date of birth, a date on a document): three text fields for day, month and year. A date picker helps only when the date is relative to today or the day of the week matters, such as booking an appointment.
-- **Numbers that aren't amounts** (card numbers, codes, phone numbers): a text input with `inputmode="numeric"`, not `type="number"`. A number input can change by accident when the user scrolls, and it gives no feedback when someone types something that isn't a number.
+- **Phone numbers:** `type="tel"`, so phones show a keypad that includes `+` and other characters people use in phone numbers.
+- **Numbers that aren't amounts** (card numbers, codes): a text input with `inputmode="numeric"`, not `type="number"`. A number input can change by accident when the user scrolls, and it gives no feedback when someone types something that isn't a number.
 - **Names:** one "Full name" field unless you really need the parts. Accept any characters, including apostrophes, hyphens and accents.
 
 Make the width of each input match the expected answer: short for a postcode or the year, wide for an email address. The width tells people what kind of answer fits. Don't use `maxlength` to limit length, because it cuts text without saying why. Validate the length and explain the limit instead.

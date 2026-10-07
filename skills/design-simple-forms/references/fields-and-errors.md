@@ -16,8 +16,8 @@ Markup and wording for common fields. Adapt the class names and components to th
 | Decimal amount | `<input type="text" inputmode="decimal">` | Put the currency or unit outside the input, hidden from screen readers with `aria-hidden="true"`, and repeat it in the label or hint. Accept answers where the user types it too. |
 | New password | `<input type="password" autocomplete="new-password">` | List the rules in a hint linked with `aria-describedby`. Offer "Show password". Live feedback on the rules is helpful here. |
 | Sign-in | `autocomplete="username"` on the email or username field, `autocomplete="current-password"` on the password | `autocomplete="off"` doesn't stop password managers, so don't fight them. |
-| One of a few options | `<fieldset>` + `<legend>` + radios | None preselected. Add "I do not know" or "None of these" if valid. |
-| Several options | `<fieldset>` + `<legend>` + checkboxes | Hint "Select all that apply". An exclusive "None" goes last after an "or" divider, and selecting it clears the others. |
+| One of a few options | `<fieldset>` + `<legend>` + radios, each with its own `<label for>` | The legend names the group; each label names an option. None preselected. Add "I do not know" or "None of these" if valid. |
+| Several options | `<fieldset>` + `<legend>` + checkboxes, each with its own `<label for>` | Hint "Select all that apply". An exclusive "None" goes last after an "or" divider, and selecting it clears the others. |
 
 Every visible input also needs:
 
