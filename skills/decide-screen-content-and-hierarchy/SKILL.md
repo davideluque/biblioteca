@@ -21,9 +21,9 @@ Then rank the topics in a single column, most important first, as if for a narro
 
 Check what the project already has: page templates, components, type and spacing tokens. A new screen should look like it belongs to the same product. Reusing familiar patterns also lowers the effort people need to understand it.
 
-## Give the screen one primary action
+## Give the screen at most one primary action
 
-Make one action the primary one, styled as the strongest button. Two primary buttons weaken each other and make the next step unclear. If a screen seems to need several, it is probably doing more than one job. Split it, or make the others secondary.
+When the screen has a main next step, make that one action the primary one, styled as the strongest button. Screens for reading, browsing or monitoring, such as an article or a dashboard, may have no primary action. Don't invent one. Two primary buttons weaken each other and make the next step unclear. If a screen seems to need several, it is probably doing more than one job. Split it, or make the others secondary.
 
 Style actions by their rank, not by their type:
 
@@ -104,7 +104,7 @@ More space around an element also makes it look more important.
 
 ## Check the result
 
-- **Purpose:** in a few seconds, can someone tell what the screen is for and what to do next? Is there exactly one primary action?
+- **Purpose:** in a few seconds, can someone tell what the screen is for and what to do next? Is there at most one primary action, and is it the step most people need next?
 - **Squint test:** blur the screen or step back. The groups and the order of emphasis you see should match the ranked list.
 - **Greyscale:** look at the screen without colour. The hierarchy should still hold. Then check that colour never carries meaning on its own.
 - **Headings-only read:** read only the title, the headings and the first words of each block. The main message should still come through.
