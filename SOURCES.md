@@ -114,7 +114,7 @@ Research depth so far: public articles, documentation, award records, survey res
 
 ## UI and UX design
 
-Interface design sources live in their own map: [UI and UX design sources](research/ui-ux-sources.md), IDs **U01–U127**. It covers usability heuristics, mobile layout and navigation, forms, onboarding and empty states, visual hierarchy, interface copy, accessibility, design systems, engagement without deceptive patterns, and design critique. It uses the same evidence signals and access conventions as this file, with columns suited to design guidance. Research pass: 2026-10-07.
+Interface design sources live in their own map: [UI and UX design sources](research/ui-ux-sources.md), IDs **U01–U142**. It covers usability heuristics, mobile layout and navigation, forms, onboarding and empty states, visual hierarchy, interface copy, accessibility, design systems, engagement without deceptive patterns, and design critique. It uses the same evidence signals and access conventions as this file, with columns suited to design guidance. Research pass: 2026-10-07.
 
 ## Using and extending this map
 
