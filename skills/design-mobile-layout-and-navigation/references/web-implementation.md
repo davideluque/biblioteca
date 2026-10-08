@@ -69,7 +69,7 @@ Site navigation is a list of links inside `<nav>`, not an ARIA `menu`. That role
 ```html
 <nav aria-label="Main">
   <button type="button" aria-expanded="false" aria-controls="main-links">Menu</button>
-  <ul id="main-links" hidden>
+  <ul id="main-links">
     <li><a href="/" aria-current="page">Home</a></li>
     <li><a href="/orders">Orders</a></li>
     <li><a href="/account">Account</a></li>
@@ -77,6 +77,7 @@ Site navigation is a list of links inside `<nav>`, not an ARIA `menu`. That role
 </nav>
 ```
 
+- Collapse the list from script on page load (set `hidden` on it), not in the HTML, so the links stay reachable if the script fails.
 - Keep the toggle button inside the `<nav>`. When it opens or closes the menu, change `aria-expanded` and the list's `hidden` attribute together, so the announced state always matches what is visible:
 
   ```js
