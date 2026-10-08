@@ -9,7 +9,7 @@ The first idea for a design is rarely the best one. Committing to it early leave
 
 ## Evidence and limits
 
-- **NN/g:** in Nielsen's studies, iteration improved measured usability by about 38% per round. In a parallel design study, the best of four alternative designs scored 56% above their average. A merged design that also took the best ideas from the "losing" versions scored 70% above it.
+- **NN/g:** in Nielsen's studies, iteration improved measured usability by about 38% per round. In a parallel design study, the best of four alternative designs scored 56% above their average. A merged design that also took the best ideas from the "losing" versions scored 70% above that same average, not above the best design.
 - **Stanford study:** Dow and colleagues compared groups that made five prototypes in the same time with the same amount of feedback. People who made several prototypes in parallel before getting feedback produced designs that experts rated higher and that performed better in the real world. Their designs were also more varied. They reacted better to criticism, because it landed on one option among several rather than on their only idea.
 - **Showing alternatives:** Tohidi, Buxton and colleagues found that people shown a single design hold back criticism. Showing several alternatives makes the feedback more honest.
 
