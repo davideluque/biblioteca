@@ -1,8 +1,8 @@
 # UI and UX design sources
 
-First research pass: **2026-10-07** (U01–U96). Visual polish sources (U97–U116) were added on **2026-10-08**. Purpose: find text-first practitioner sources for future skills about screen content, layout, forms, mobile navigation, onboarding, copy, accessibility, playful products and design review. Extracted so far: [Design simple forms](../skills/design-simple-forms/SKILL.md) , [Decide screen content and hierarchy](../skills/decide-screen-content-and-hierarchy/SKILL.md) and [Polish visual details](../skills/polish-visual-details/SKILL.md); see the extraction notes at the end.
+First research pass: **2026-10-07** (U01–U96). Visual polish sources (U97–U116) and creative exploration methods (U117–U127) were added on **2026-10-08**. Purpose: find text-first practitioner sources for future skills about screen content, layout, forms, mobile navigation, onboarding, copy, accessibility, playful products and design review. Extracted so far: [Design simple forms](../skills/design-simple-forms/SKILL.md) , [Decide screen content and hierarchy](../skills/decide-screen-content-and-hierarchy/SKILL.md), [Polish visual details](../skills/polish-visual-details/SKILL.md) and [Parallel and iterative design](../skills/parallel-and-iterative-design/SKILL.md); see the extraction notes at the end.
 
-This map follows the conventions of [SOURCES.md](../SOURCES.md), which links here. IDs `U01`–`U116` are stable. A row without a skill link has not been extracted yet.
+This map follows the conventions of [SOURCES.md](../SOURCES.md), which links here. IDs `U01`–`U127` are stable. A row without a skill link has not been extracted yet.
 
 ## How this was checked
 
@@ -22,7 +22,7 @@ Area numbers: 1 foundations · 2 mobile layout/nav · 3 forms · 4 onboarding/em
 
 | ID | Source and people | Type · areas | Why credible | Example rules (paraphrased) | Access | Date / status | Checked | Local skill(s) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| U01 | [10 Usability Heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/) — Jakob Nielsen, NN/g | Guideline · 1, 10 | **Practice.** The reference set for heuristic review since 1994. | Give users a clear exit from an action they started by mistake. Prevent errors first instead of relying on good error messages. | Free | Updated Jan 2024; current | Opened | — |
+| U01 | [10 Usability Heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/) — Jakob Nielsen, NN/g | Guideline · 1, 10 | **Practice.** The reference set for heuristic review since 1994. | Give users a clear exit from an action they started by mistake. Prevent errors first instead of relying on good error messages. | Free | Updated Jan 2024; current | Opened | [Parallel and iterative design](../skills/parallel-and-iterative-design/SKILL.md) |
 | U02 | [Progressive Disclosure](https://www.nngroup.com/articles/progressive-disclosure/) — Jakob Nielsen, NN/g | Article · 1 | **Practice.** | Show what users often need first and move the rest to a second layer. Label the way to advanced options clearly. | Free | 2006; principle holds, examples dated | Opened | [Decide screen content and hierarchy](../skills/decide-screen-content-and-hierarchy/SKILL.md) |
 | U03 | [Memory Recognition and Recall in User Interfaces](https://www.nngroup.com/articles/recognition-and-recall/) — Raluca Budiu, NN/g | Article · 1 | **Practice.** | Show history and recent items instead of making users remember them. Prefer visible options over commands people must memorise. | Free | Jan 2024 | Opened | [Decide screen content and hierarchy](../skills/decide-screen-content-and-hierarchy/SKILL.md) |
 | U04 | [Information Scent](https://www.nngroup.com/articles/information-scent/) — Raluca Budiu, NN/g | Article · 1, 6 | **Practice.** | Use specific link labels. "More" gives no basis to decide whether to click. Give enough context early that users can tell they're on the right path. | Free | Feb 2020 | Opened | [Decide screen content and hierarchy](../skills/decide-screen-content-and-hierarchy/SKILL.md) |
@@ -38,8 +38,8 @@ Caveat for U07: some laws have weak evidence behind them (Miller's 7±2 is often
 
 | ID | Source and people | Type · areas | Why credible | Example rules (paraphrased) | Access | Date / status | Checked | Local skill(s) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| U10 | [How to Conduct a Heuristic Evaluation](https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/) — Kate Moran & Kelley Gordon, NN/g | Procedure + workbook · 10 | **Practice.** | 3–5 evaluators each review alone against the heuristics, then merge and prioritise the findings. The workbook has prompt questions for each heuristic. | Free (PDF workbook) | Jun 2023 | Opened (article; PDF not opened) | — |
-| U11 | [Severity Ratings for Usability Problems](https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/) — Jakob Nielsen | Method · 10 | **Practice.** The standard severity scale. | Rate each problem 0–4 by how often it happens, how much it hurts and whether it persists. | Free | 1994; still the standard | Opened | — |
+| U10 | [How to Conduct a Heuristic Evaluation](https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/) — Kate Moran & Kelley Gordon, NN/g | Procedure + workbook · 10 | **Practice.** | 3–5 evaluators each review alone against the heuristics, then merge and prioritise the findings. The workbook has prompt questions for each heuristic. | Free (PDF workbook) | Jun 2023 | Opened (article; PDF not opened) | [Parallel and iterative design](../skills/parallel-and-iterative-design/SKILL.md) |
+| U11 | [Severity Ratings for Usability Problems](https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/) — Jakob Nielsen | Method · 10 | **Practice.** The standard severity scale. | Rate each problem 0–4 by how often it happens, how much it hurts and whether it persists. | Free | 1994; still the standard | Opened | [Parallel and iterative design](../skills/parallel-and-iterative-design/SKILL.md) |
 | U12 | [Setting the Foundation for Meaningful Critiques](https://archive.uie.com/brainsparks/2013/10/09/uietips-meaningful_critiques/) — Adam Connor & Aaron Irizarry (UIE) | Article · 10 | **Practice.** Authors of *Discussing Design* (O'Reilly, 2015). | Agree on goals, principles, personas and scenarios before the critique. Each comment ties a design choice to an objective; "I like it" is not critique. | Free; book paid | 2013; valid | Opened | — |
 | U13 | [Design Critiques](https://www.nngroup.com/articles/design-critiques/) — Sarah Gibbons, NN/g | Article · 10 | **Practice.** | Set the scope and objectives first. Use round-robin feedback. Don't solve problems during the critique. | Free | 2016 | Opened | — |
 | U14 | [Design Critiques at Figma](https://www.figma.com/blog/design-critiques-at-figma/) — Noah Levin | Practice write-up · 10 | **Practice.** From Figma's design leadership. | Six critique formats (standard, jam, pair, silent written, paper, FYI) and when each fits. Covers process more than screen rules. | Free | Sep 2019 | Opened | — |
@@ -207,6 +207,24 @@ Added 2026-10-08 for the visual polish skill.
 | U114 | [Avatar](https://primer.style/product/components/avatar/) — GitHub Primer | Guideline · 5, 8 | **Practice.** | Circles for people, squares for teams, organisations and bots. Fixed sizes from 16 to 64px. Alt text when no name is shown. | Free | Current | Opened | [Polish visual details](../skills/polish-visual-details/SKILL.md) |
 | U115 | [Avatar usage](https://atlassian.design/components/avatar/usage) — Atlassian Design System | Guideline · 5, 8 | **Practice.** | Circle for people, hexagon for AI agents, square for projects. Always show a default image. | Free | Current | Opened | [Polish visual details](../skills/polish-visual-details/SKILL.md) |
 | U116 | [Skeleton Screens 101](https://www.nngroup.com/articles/skeleton-screens/) — NN/g | Article · 4, 5 | **Practice.** | No indicator under 1 s; skeleton for a page or spinner for a module at 2–10 s; progress bar beyond that. | Free | Jun 2023 | Opened | [Polish visual details](../skills/polish-visual-details/SKILL.md) |
+
+## Creative exploration methods
+
+Added 2026-10-08 for the parallel and iterative design skill.
+
+| ID | Source and people | Type · areas | Why credible | Example rules (paraphrased) | Access | Date / status | Checked | Local skill(s) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| U117 | [Parallel & Iterative Design + Competitive Testing](https://www.nngroup.com/articles/parallel-and-iterative-design/) — Jakob Nielsen & Therese Fessenden, NN/g | Method article · 10, 1 | **Research.** Reports Nielsen's 1993 iteration study and the 1996 Nielsen & Faber parallel design study. | Create at least 3 alternatives, keep them rough, merge the best ideas instead of picking a winner, then iterate at least twice. About 38% gain per iteration; merged design 70% above the average of the originals. | Free | 2011, updated Dec 2024 | Opened | [Parallel and iterative design](../skills/parallel-and-iterative-design/SKILL.md) |
+| U118 | [Parallel Prototyping Leads to Better Design Results, More Divergence, and Increased Self-Efficacy](https://hci.stanford.edu/publications/2010/parallel-prototyping/ParallelPrototyping2010-submitted.pdf) — Steven Dow et al. (ACM TOCHI) | Peer-reviewed study · 10 | **Research.** Controlled study, 33 participants. | With the same time and feedback, people who made several prototypes before getting feedback produced better-rated, better-performing and more varied designs, and took criticism better. | Free author manuscript | 2010 | Partly (pages 1–3 and 5–7 read) | [Parallel and iterative design](../skills/parallel-and-iterative-design/SKILL.md) |
+| U119 | [The Double Diamond](https://www.designcouncil.org.uk/our-resources/the-double-diamond/) — Design Council | Process model · 10 | **Practice.** Widely used design process model, published by the UK's design council. | Discover and define the problem before you develop and deliver solutions. Each diamond widens, then narrows. | Free (CC BY 4.0) | 2004; page current | Opened | [Parallel and iterative design](../skills/parallel-and-iterative-design/SKILL.md) |
+| U120 | [How Might We Questions](https://www.nngroup.com/articles/how-might-we-questions/) — Maria Rosala, NN/g | Article · 10 | **Practice.** | Base the question on research findings, aim it at the outcome, and leave the solution out of it. | Free | Jan 2021 | Opened | [Parallel and iterative design](../skills/parallel-and-iterative-design/SKILL.md) |
+| U121 | [Design Principles](https://www.nngroup.com/articles/design-principles/) — Maria Rosala, NN/g | Article · 10, 8 | **Practice.** | A good principle takes a stand on a trade-off, says why it matters to users, and is short. Keep fewer than ten. | Free | Aug 2020 | Opened | [Parallel and iterative design](../skills/parallel-and-iterative-design/SKILL.md) |
+| U122 | [Competitive Usability Evaluations](https://www.nngroup.com/articles/competitive-usability-evaluations/) — Tim Neusesser, NN/g | Article · 10 | **Practice.** | Study 2–4 competitors for what works, what fails and the gaps. Beat them, don't copy them. | Free | Jan 2024 | Opened | [Parallel and iterative design](../skills/parallel-and-iterative-design/SKILL.md) |
+| U123 | [Mood Boards in UX](https://www.nngroup.com/articles/mood-boards/) — Lillian Yang, NN/g | Article · 10, 5 | **Practice.** | Pick 4–5 mood adjectives, collect visuals that fit, arrange them, share for feedback. Too many competitor screenshots push toward features too early. | Free | Feb 2023 | Opened | [Parallel and iterative design](../skills/parallel-and-iterative-design/SKILL.md) |
+| U124 | [Style Tiles](https://styletil.es/) — Samantha Warren | Method + template · 10, 5 | **Practice.** | Set out fonts, colours and component styles without a layout, to agree on visual direction before mockups. | Free | About 2011; site maintained | Opened | [Parallel and iterative design](../skills/parallel-and-iterative-design/SKILL.md) |
+| U125 | [Ideation for Everyday Design Challenges](https://www.nngroup.com/articles/ux-ideation/) — Aurora Harley, NN/g | Article · 10 | **Practice.** | Defer judgment and go for quantity. It is easier to scale back a bold idea that meets a real need than to make a mundane idea desirable. | Free | Jan 2017 | Opened | [Parallel and iterative design](../skills/parallel-and-iterative-design/SKILL.md) |
+| U126 | [Brainstorm rules](https://www.designkit.org/methods/brainstorm-rules.html) and Bundle Ideas — IDEO.org Design Kit | Method cards · 10 | **Practice.** | Defer judgement, encourage wild ideas, build on others' ideas. Bundle the strongest parts of ideas into a whole. | Free | Undated | Opened | [Parallel and iterative design](../skills/parallel-and-iterative-design/SKILL.md) |
+| U127 | [Design Studio Workshop: Adding Up the Benefits](https://articlesdev.uie.com/?p=292) — Jared Spool, UIE | Article · 10 | **Practice.** Describes the Design Studio method (credited to Todd Zaki Warfel and Will Evans). | Rounds of quick sketching, presenting and critique in small groups, then refine the strongest ideas in shorter rounds. | Free | Jul 2012 | Opened | — |
 
 ## Ranking for turning into agent-readable guidance
 
@@ -405,3 +423,48 @@ Pages were read through a fetch summariser on 2026-10-08. Checked directly again
 - No free primary text was found for Walter's hierarchy itself, Saffer's *Microinteractions*, or Refactoring UI's chapters on personality, depth and borders.
 
 **Validation:** recorded in the PR.
+
+### parallel-and-iterative-design (2026-10-08)
+
+[Parallel and iterative design](../skills/parallel-and-iterative-design/SKILL.md).
+
+The user asked for a skill that helps the creative process of redesigning screens, built on an established method rather than an invented workflow, and not tied to any one screen type. Five candidate methods were compared:
+- parallel and iterative design (NN/g)
+- the Double Diamond
+- the GV Design Sprint's sketching steps
+- the Design Studio method
+- heuristic evaluation
+
+Parallel and iterative design was chosen because it is the only one with measured outcome evidence (U117, U118). Its own article names heuristic review as a valid evaluation step between rounds.
+
+**Primary sources:**
+- **U117:** the method.
+- **U118:** independent evidence.
+- **U01, U10, U11:** the evaluation step.
+
+**Supporting sources:**
+- **U119:** problem framing before solutions.
+- **U120–U124:** How Might We questions, design principles, competitive evaluation, mood boards and style tiles for step 1.
+- **U125–U126:** generating ideas.
+
+U127 was considered but not used. The Design Sprint's detailed sketching steps were dropped, because only secondary summaries were available. Tohidi et al. (CHI 2006) is cited through Dow et al.'s summary; the paywalled paper was not read. Nielsen & Faber (1996) is cited through NN/g's report of it.
+
+Checked directly against the page text:
+- NN/g's minimum of three alternatives, 38% per iteration, and 56% and 70% for picking versus merging.
+- NN/g's ideation line about scaling back bold ideas.
+
+**Our adaptation:**
+- A single agent creates divergence by giving each alternative a different, explicit direction and drafting each one separately. The original method uses independent designers.
+- Self-review stands in for 3–5 independent evaluators. The skill says this is weaker.
+- The stopping rule.
+
+**Limitations:**
+- Nielsen's figures measure usability, not visual appeal.
+- Dow et al. studied novices designing banner ads.
+
+**Validation:**
+- The skill validator passed.
+- All external links returned HTTP 200 on 2026-10-08.
+- Local links resolve.
+
+This is structural validation only.
