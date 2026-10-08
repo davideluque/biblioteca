@@ -39,12 +39,16 @@ Browser support differs, so test on real devices. Whatever the setting, the focu
 
 ## Sticky bars and focus
 
-A sticky header or footer must not fully cover the element that has keyboard focus (WCAG 2.4.11). Reserve its height with `scroll-padding`, so the browser scrolls focused elements clear of the bar:
+A sticky header or footer must not fully cover the element that has keyboard focus (WCAG 2.4.11). Reserve its height with `scroll-padding`, so the browser scrolls focused elements clear of the bar. Also add the same amount of real padding at the end of the page. Without it, the last controls can't scroll far enough to clear a fixed bottom bar (WCAG technique C43):
 
 ```css
 html {
   scroll-padding-top: var(--header-height);
   scroll-padding-bottom: var(--bottom-bar-height);
+}
+
+body {
+  padding-bottom: var(--bottom-bar-height);
 }
 ```
 
@@ -65,7 +69,7 @@ Site navigation is a list of links inside `<nav>`, not an ARIA `menu`. That role
 ```html
 <nav aria-label="Main">
   <button type="button" aria-expanded="false" aria-controls="main-links">Menu</button>
-  <ul id="main-links">
+  <ul id="main-links" hidden>
     <li><a href="/" aria-current="page">Home</a></li>
     <li><a href="/orders">Orders</a></li>
     <li><a href="/account">Account</a></li>
@@ -73,9 +77,17 @@ Site navigation is a list of links inside `<nav>`, not an ARIA `menu`. That role
 </nav>
 ```
 
-- Keep the toggle button inside the `<nav>`, and update `aria-expanded` when it opens and closes.
+- Keep the toggle button inside the `<nav>`. When it opens or closes the menu, change `aria-expanded` and the list's `hidden` attribute together, so the announced state always matches what is visible:
+
+  ```js
+  button.addEventListener("click", () => {
+    const open = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute("aria-expanded", String(!open));
+    list.hidden = open;
+  });
+  ```
 - Mark the current page with `aria-current="page"`, and show it with more than colour alone.
-- At wide widths, hide the toggle and show the list.
+- At wide widths, hide the toggle and remove `hidden` from the list, so the links are always visible.
 
 ## Target size
 

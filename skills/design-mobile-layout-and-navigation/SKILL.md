@@ -89,6 +89,7 @@ Decide layout by the width available, not by device type or orientation. Split s
 | 600–839 dp | Medium (tablets in portrait, unfolded phones) | Navigation rail on the side |
 | 840 dp and up | Expanded and larger (tablets in landscape, desktop) | Rail or permanent sidebar |
 
+- **Check height too.** On a phone in landscape (height under 480 dp) or a foldable in tabletop posture, the width can reach the medium class while the height stays compact. Keep the bottom bar there. Android's adaptive navigation component already does this, so prefer it over switching on width yourself.
 - **Apple** uses compact and regular size classes. On iPad, the tab bar sits at the top and can turn into a sidebar. Use the platform's adaptive navigation components where they exist instead of switching layouts by hand.
 - **Keep the same functions at every size.** Only the amount shown changes. A wider screen shows more at once; it doesn't get different features.
 - **Don't carry mobile hiding to desktop.** In NN/g's study, a hamburger menu on desktop reduced navigation use even more than on phones. On wide screens, show navigation as a visible top bar or sidebar, and show search as a visible box rather than an icon.
@@ -105,7 +106,7 @@ Decide layout by the width available, not by device type or orientation. Split s
 - Content stays inside the safe areas. The keyboard never covers the active field. Sticky bars never fully hide the focused element.
 - The layout works rotated, at 200% text size, and at 320 CSS px wide.
 - On wide windows, navigation and search are visible, not hidden behind icons.
-- The layout switches by window width, checked around 600 and 840 dp (or the project's breakpoints).
+- The layout switches by window size, checked around 600 and 840 dp wide (or the project's breakpoints), and keeps the bottom bar when the height is compact.
 
 Test on a real phone, held in one hand and in two. Simulators don't show how hard edges and corners are to reach.
 
