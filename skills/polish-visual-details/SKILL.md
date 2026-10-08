@@ -113,7 +113,7 @@ A skeleton should show the shape of the real content. A frame with no content sh
 - **Tokens:** every colour, shadow, radius, duration and icon size comes from the project's tokens or a small set you defined. Search for one-off values.
 - **Colour:** neutral overall, with colour reserved for meaning. All text meets 4.5:1 (3:1 for large text), and borders and icons that carry meaning meet 3:1.
 - **Depth:** one light direction, a few elevation levels, each surface with its matching shadow.
-- **Motion:** every animation has a purpose, takes under 500 ms, uses easing, and is reduced under `prefers-reduced-motion`.
+- **Motion:** every animation has a purpose and uses easing. Most take under 500 ms; longer durations are kept for large movements or existing tokens, such as Carbon's 700 ms background dimming. All of it is reduced under `prefers-reduced-motion`.
 - **Icons and avatars:** one consistent icon set, aligned and sized with the text. Avatars have fallbacks and correct alt text.
 - **Loading:** no spinner flashes for fast loads, skeletons match the real layout, and nothing jumps when content arrives.
 - **Personality:** each choice fits the written personality traits, and the calmer option was chosen where in doubt.

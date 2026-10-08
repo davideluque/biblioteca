@@ -1,12 +1,12 @@
 # UI and UX design sources
 
-Research pass: **2026-10-07**. Purpose: find text-first practitioner sources for future skills about screen content, layout, forms, mobile navigation, onboarding, copy, accessibility, playful products and design review. Extracted so far: [Design simple forms](../skills/design-simple-forms/SKILL.md) , [Decide screen content and hierarchy](../skills/decide-screen-content-and-hierarchy/SKILL.md) and [Polish visual details](../skills/polish-visual-details/SKILL.md); see the extraction notes at the end.
+First research pass: **2026-10-07** (U01–U96). Visual polish sources (U97–U116) were added on **2026-10-08**. Purpose: find text-first practitioner sources for future skills about screen content, layout, forms, mobile navigation, onboarding, copy, accessibility, playful products and design review. Extracted so far: [Design simple forms](../skills/design-simple-forms/SKILL.md) , [Decide screen content and hierarchy](../skills/decide-screen-content-and-hierarchy/SKILL.md) and [Polish visual details](../skills/polish-visual-details/SKILL.md); see the extraction notes at the end.
 
 This map follows the conventions of [SOURCES.md](../SOURCES.md), which links here. IDs `U01`–`U116` are stable. A row without a skill link has not been extracted yet.
 
 ## How this was checked
 
-- Each URL marked **Opened** was loaded on 2026-10-07 and its content checked against the example rules quoted here. **Partly** means the page loaded but only some of the content could be read, or the content was confirmed through a feed or search snippet. **Not opened** means the source was found but not read.
+- Each URL marked **Opened** was loaded on the date of the pass that added it (see above) and its content checked against the example rules quoted here. **Partly** means the page loaded but only some of the content could be read, or the content was confirmed through a feed or search snippet. **Not opened** means the source was found but not read.
 - Example rules are paraphrased, not quoted.
 - Evidence signals use the legend in `SOURCES.md`, including **Standard** (normative W3C text) and **Research** (a published study with a described method or data, such as NN/g eyetracking or Baymard testing).
 - No paid books were read. Where a book is named, only its free material was used.
