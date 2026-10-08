@@ -1,12 +1,12 @@
 # UI and UX design sources
 
-Research pass: **2026-10-07**. Purpose: find text-first practitioner sources for future skills about screen content, layout, forms, mobile navigation, onboarding, copy, accessibility, playful products and design review. Extracted so far: [Design simple forms](../skills/design-simple-forms/SKILL.md) and [Decide screen content and hierarchy](../skills/decide-screen-content-and-hierarchy/SKILL.md); see the extraction notes at the end.
+First research pass: **2026-10-07** (U01–U96). Visual polish sources (U97–U116) were added on **2026-10-08**. Purpose: find text-first practitioner sources for future skills about screen content, layout, forms, mobile navigation, onboarding, copy, accessibility, playful products and design review. Extracted so far: [Design simple forms](../skills/design-simple-forms/SKILL.md) , [Decide screen content and hierarchy](../skills/decide-screen-content-and-hierarchy/SKILL.md) and [Polish visual details](../skills/polish-visual-details/SKILL.md); see the extraction notes at the end.
 
-This map follows the conventions of [SOURCES.md](../SOURCES.md), which links here. IDs `U01`–`U96` are stable. A row without a skill link has not been extracted yet.
+This map follows the conventions of [SOURCES.md](../SOURCES.md), which links here. IDs `U01`–`U116` are stable. A row without a skill link has not been extracted yet.
 
 ## How this was checked
 
-- Each URL marked **Opened** was loaded on 2026-10-07 and its content checked against the example rules quoted here. **Partly** means the page loaded but only some of the content could be read, or the content was confirmed through a feed or search snippet. **Not opened** means the source was found but not read.
+- Each URL marked **Opened** was loaded on the date of the pass that added it (see above) and its content checked against the example rules quoted here. **Partly** means the page loaded but only some of the content could be read, or the content was confirmed through a feed or search snippet. **Not opened** means the source was found but not read.
 - Example rules are paraphrased, not quoted.
 - Evidence signals use the legend in `SOURCES.md`, including **Standard** (normative W3C text) and **Research** (a published study with a described method or data, such as NN/g eyetracking or Baymard testing).
 - No paid books were read. Where a book is named, only its free material was used.
@@ -44,8 +44,8 @@ Caveat for U07: some laws have weak evidence behind them (Miller's 7±2 is often
 | U13 | [Design Critiques](https://www.nngroup.com/articles/design-critiques/) — Sarah Gibbons, NN/g | Article · 10 | **Practice.** | Set the scope and objectives first. Use round-robin feedback. Don't solve problems during the critique. | Free | 2016 | Opened | — |
 | U14 | [Design Critiques at Figma](https://www.figma.com/blog/design-critiques-at-figma/) — Noah Levin | Practice write-up · 10 | **Practice.** From Figma's design leadership. | Six critique formats (standard, jam, pair, silent written, paper, FYI) and when each fits. Covers process more than screen rules. | Free | Sep 2019 | Opened | — |
 | U15 | [How to Run a Design Crit](https://digitalblog.coop.co.uk/2018/03/28/how-to-run-a-design-crit-and-why-theyre-important/) — Jack Sheppard, Co-op Digital | Guide · 10 | **Practice.** | Ask questions instead of saying "it doesn't work". Label each comment as fact, opinion or assumption. | Free | 2018 | Opened | — |
-| U16 | Refactoring UI articles — Adam Wathan & Steve Schoger: [7 Practical Tips for Cheating at Design](https://medium.com/refactoring-ui/7-practical-tips-for-cheating-at-design-40c736799886); "Redesigning Laravel.io" | Before/after walkthroughs · 5, 10 | **Practice.** Authors of Tailwind CSS; the book is widely recommended. | Build hierarchy with colour and weight, not only size. Make competing elements quieter instead of making the main one louder. Use fewer borders. No grey text on coloured backgrounds. | Free articles; book paid (2 sample chapters on refactoringui.com) | 2017–2018 | **Partly.** Medium returns 403 to fetchers; content confirmed through the [RSS feed](https://medium.com/feed/refactoring-ui). Most of the teaching is in images. | [Decide screen content and hierarchy](../skills/decide-screen-content-and-hierarchy/SKILL.md) |
-| U17 | [7 Rules for Creating Gorgeous UI, part 1](https://www.learnui.design/blog/7-rules-for-creating-gorgeous-ui-part-1.html) — Erik D. Kennedy | Article with before/after · 5, 10 | **Practice.** Independent designer and teacher. | Design in greyscale first, then add colour. Double your whitespace. | Free | Updated Jun 2024 | Opened | [Decide screen content and hierarchy](../skills/decide-screen-content-and-hierarchy/SKILL.md) |
+| U16 | Refactoring UI articles — Adam Wathan & Steve Schoger: [7 Practical Tips for Cheating at Design](https://medium.com/refactoring-ui/7-practical-tips-for-cheating-at-design-40c736799886); "Redesigning Laravel.io" | Before/after walkthroughs · 5, 10 | **Practice.** Authors of Tailwind CSS; the book is widely recommended. | Build hierarchy with colour and weight, not only size. Make competing elements quieter instead of making the main one louder. Use fewer borders. No grey text on coloured backgrounds. | Free articles; book paid (2 sample chapters on refactoringui.com) | 2017–2018 | **Partly.** Medium returns 403 to fetchers; content confirmed through the [RSS feed](https://medium.com/feed/refactoring-ui). Most of the teaching is in images. | [Decide screen content and hierarchy](../skills/decide-screen-content-and-hierarchy/SKILL.md); [Polish visual details](../skills/polish-visual-details/SKILL.md) |
+| U17 | [7 Rules for Creating Gorgeous UI, part 1](https://www.learnui.design/blog/7-rules-for-creating-gorgeous-ui-part-1.html) — Erik D. Kennedy | Article with before/after · 5, 10 | **Practice.** Independent designer and teacher. | Design in greyscale first, then add colour. Double your whitespace. | Free | Updated Jun 2024 | Opened | [Decide screen content and hierarchy](../skills/decide-screen-content-and-hierarchy/SKILL.md); [Polish visual details](../skills/polish-visual-details/SKILL.md) |
 
 ## Mobile layout and navigation
 
@@ -66,7 +66,7 @@ WCAG 2.2 is the current W3C Recommendation. WCAG 3.0 is still a Working Draft, s
 | ID | Source and people | Type · areas | Why credible | Example rules (paraphrased) | Access | Date / status | Checked | Local skill(s) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | U25 | WCAG 2.2 Understanding: [2.5.8 Target Size (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html), [2.5.5 Target Size (Enhanced)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html) — W3C WAI | Standard · 7, 2 | **Standard.** | AA: targets at least 24×24 CSS px, or spaced so a 24px circle around each target doesn't overlap another target or its circle. Six 20px icons with 4px gaps pass; with no gaps they fail. AAA: 44×44. | Free | Updated May 2026 | Opened | [Design simple forms](../skills/design-simple-forms/SKILL.md) |
-| U26 | WCAG 2.2 Understanding: [1.4.11 Non-text Contrast](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) (with 1.4.3) | Standard · 7, 5 | **Standard.** | Text: 4.5:1, or 3:1 for large text. Control borders, states and meaningful icons: 3:1. A #767676 input border on white passes; #AAA fails. | Free | Current | Opened | [Decide screen content and hierarchy](../skills/decide-screen-content-and-hierarchy/SKILL.md) |
+| U26 | WCAG 2.2 Understanding: [1.4.11 Non-text Contrast](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) (with 1.4.3) | Standard · 7, 5 | **Standard.** | Text: 4.5:1, or 3:1 for large text. Control borders, states and meaningful icons: 3:1. A #767676 input border on white passes; #AAA fails. | Free | Current | Opened | [Decide screen content and hierarchy](../skills/decide-screen-content-and-hierarchy/SKILL.md); [Polish visual details](../skills/polish-visual-details/SKILL.md) |
 | U27 | WCAG 2.2 Understanding: [2.4.11 Focus Not Obscured](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html), [2.4.13 Focus Appearance](https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance.html) | Standard · 7, 2 | **Standard.** | Sticky headers, footers and cookie banners must not hide the focused element completely; `scroll-padding` fixes this. AAA focus indicator: at least a 2px perimeter with 3:1 change between states. | Free | Current | Opened (2.4.7 page not opened) | — |
 | U28 | WCAG 2.2 Understanding: [1.4.10 Reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html), [2.3.3 Animation from Interactions](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html) | Standard · 7, 2 | **Standard.** | No scrolling in two directions at 320 CSS px wide. Exceptions include data tables and maps. Users must be able to turn off motion triggered by interaction; `prefers-reduced-motion` is a sufficient technique. | Free | Current | Opened | [Decide screen content and hierarchy](../skills/decide-screen-content-and-hierarchy/SKILL.md) |
 | U29 | [Apple HIG: Accessibility](https://developer.apple.com/design/human-interface-guidelines/accessibility) — Apple | Platform guideline · 7, 2 | **Practice.** | iOS controls: 44×44 pt by default, 28×28 pt minimum. Padding about 12 pt around controls with a bezel and 24 pt around those without. Respect Reduce Motion. | Free | Updated 2025 | Opened via JSON | — |
@@ -74,7 +74,7 @@ WCAG 2.2 is the current W3C Recommendation. WCAG 3.0 is still a Working Draft, s
 | U31 | [Contrast and Color Accessibility](https://webaim.org/articles/contrast/) and [WebAIM Million](https://webaim.org/projects/million/) — WebAIM | Article + data · 7, 5 | **Practice + Research.** WebAIM Million is a yearly automated scan of 1M home pages. | Don't round ratios up: #777 on white is 4.47:1 and fails. The 2026 scan found low-contrast text on 83.9% of home pages. | Free | Article 2021; data 2026 | Opened | — |
 | U32 | [A11Y Project Checklist](https://www.a11yproject.com/checklist/) — The A11Y Project | Checklist · 7 | **Practice.** Community-maintained and mapped to WCAG. | Don't disable zoom. Test at 200% text size. Focus order follows visual order. Animation respects reduced-motion settings. | Free | No date; maps to 2.2 | Opened | — |
 | U33 | [Designing accessible focus indicators](https://www.sarasoueidan.com/blog/focus-indicators/) — Sara Soueidan; [GOV.UK focus states](https://design-system.service.gov.uk/get-started/focus-states/) | Article + system decision · 7, 8 | **Practice.** | Use a two-tone outline with `:focus-visible` and an offset. GOV.UK uses a yellow fill plus a thick black border, so focus shows on any background. | Free | 2021–2023 | Opened | — |
-| U34 | [prefers-reduced-motion](https://web.dev/articles/prefers-reduced-motion) — Thomas Steiner, web.dev; [Learn Accessibility](https://web.dev/learn/accessibility) | Article + course · 7 | **Practice.** | Turn down or replace motion when the user asks for less, not only remove it. | Free | 2019 article; course current | Opened | — |
+| U34 | [prefers-reduced-motion](https://web.dev/articles/prefers-reduced-motion) — Thomas Steiner, web.dev; [Learn Accessibility](https://web.dev/learn/accessibility) | Article + course · 7 | **Practice.** | Turn down or replace motion when the user asks for less, not only remove it. | Free | 2019 article; course current | Opened | [Polish visual details](../skills/polish-visual-details/SKILL.md) |
 | U35 | [Menus & Menu Buttons](https://inclusive-components.design/menus-menu-buttons/) — Heydon Pickering (Inclusive Components) | Article · 7, 2 | **Practice.** | Site navigation is a list of links, not an ARIA `menu`. | Free | 2017; current | Opened | — |
 
 ## Forms and inputs
@@ -102,7 +102,7 @@ Sources disagree on validation timing. GOV.UK and Silver say validate on submit.
 | U46 | [Error-Message Guidelines](https://www.nngroup.com/articles/error-message-guidelines/) — Neusesser & Sunwall, NN/g | Guideline · 6 | **Practice.** | Say exactly what went wrong in plain words, offer a fix, don't blame the user, and keep their input. | Free | 2023 | Opened | — |
 | U47 | [Top 10 tips for style and voice](https://learn.microsoft.com/en-us/style-guide/top-10-tips-style-voice) — Microsoft Writing Style Guide | Guideline with before/after · 6 | **Practice.** | Instead of "Invalid ID", say what a correct ID looks like. Start with the verb and cut "you can". Use sentence case. | Free | Jul 2026 | Opened. Uses US punctuation. | — |
 | U48 | Polaris content: [Error messages](https://github.com/Shopify/polaris/blob/main/polaris.shopify.com/content/content/error-messages.mdx) — Shopify | Guideline with do/don't · 6 | **Practice.** | Do: "To save this product, make 2 changes: Enter title, Add weight". Don't: "There are 2 errors on this page". Avoid "invalid". | Free; **repo archived** | Archived | Opened (repo). The "Actionable language" page is gone. | — |
-| U49 | [Mailchimp Content Style Guide](https://styleguide.mailchimp.com/) — Mailchimp | Guideline · 6, 7 | **Practice.** Widely cited style guide. | Short sentences with familiar words. Descriptive links, never "click here". Has sections on voice and tone, web elements and translation. | Free | Current | Opened | — |
+| U49 | [Mailchimp Content Style Guide](https://styleguide.mailchimp.com/) — Mailchimp | Guideline · 6, 7 | **Practice.** Widely cited style guide. | Short sentences with familiar words. Descriptive links, never "click here". Has sections on voice and tone, web elements and translation. | Free | Current | Opened | [Polish visual details](../skills/polish-visual-details/SKILL.md) |
 | U50 | [Writing error messages](https://atlassian.design/content/writing-guidelines/writing-error-messages) — Atlassian | Guideline · 6 | **Practice.** | Title of 3–4 words, body of 1–2 sentences. Don't guess at a cause you don't know. Button text is a verb ("Save"), not "OK". | Free | Current | **Partly** (search snippet only; page renders client-side) | — |
 
 GOV.UK avoids contractions, while Microsoft and Mailchimp encourage them. That is a tone choice for each product, not a rule.
@@ -180,6 +180,33 @@ Added 2026-10-07 for the screen content and hierarchy skill.
 | U94 | [Mobile First Is NOT Mobile Only](https://www.nngroup.com/articles/mobile-first-not-mobile-only/) — NN/g | Research article · 2 | **Research.** Same study as U21. | Don't copy mobile hiding patterns, like a hamburger menu, onto desktop. Hidden navigation hurt desktop use even more. | Free | 2016 | Opened | [Decide screen content and hierarchy](../skills/decide-screen-content-and-hierarchy/SKILL.md) |
 | U95 | [Mobile First](https://www.lukew.com/ff/entry.asp?933) — Luke Wroblewski | Article · 2, 1 | **Practice.** Originator of the mobile-first approach. | The small screen forces focus: keep only the data and actions that matter most. | Free | 2009; principle holds | Opened | [Decide screen content and hierarchy](../skills/decide-screen-content-and-hierarchy/SKILL.md) |
 | U96 | [Priority Guides: A Content-First Alternative to Wireframes](https://alistapart.com/article/priority-guides-a-content-first-alternative-to-wireframes/) — Heleen van Nues & Ralph Overkamp (A List Apart) | Article · 1, 5 | **Practice.** Agency practice described with a worked process. | List a screen's content in one column, ranked by importance, using real copy, before any layout. The order stays the same on every screen size. | Free | May 2018 | Opened | [Decide screen content and hierarchy](../skills/decide-screen-content-and-hierarchy/SKILL.md) |
+
+## Visual polish
+
+Added 2026-10-08 for the visual polish skill.
+
+| ID | Source and people | Type · areas | Why credible | Example rules (paraphrased) | Access | Date / status | Checked | Local skill(s) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| U97 | [The Aesthetic-Usability Effect](https://www.nngroup.com/articles/aesthetic-usability-effect/) — Kate Moran, NN/g | Article · 5, 10 | **Research.** Traces to Kurosu & Kashimura's 1995 study. | People see attractive interfaces as easier to use and forgive small problems. Looks don't fix severe problems, and they can hide problems in testing. | Free | 2024, reviewed 2026 | Opened | [Polish visual details](../skills/polish-visual-details/SKILL.md) |
+| U98 | [A Theory of User Delight](https://www.nngroup.com/articles/theory-user-delight/) — Therese Fessenden, NN/g | Article · 5, 9 | **Practice.** Builds on Aarron Walter's hierarchy of user needs. | Functional, reliable, usable, then pleasurable. Surface delight such as animation doesn't help until the whole flow works. | Free | 2017 | Opened | [Polish visual details](../skills/polish-visual-details/SKILL.md) |
+| U99 | [Redesigning With Personality](https://www.smashingmagazine.com/2012/03/redesigning-with-personality/) — Aarron Walter (Smashing Magazine) | Book sample chapter · 5, 6 | **Practice.** Author of *Designing for Emotion*. | Start a redesign from the product's personality, not from trends. A design persona lists traits, voice and a visual lexicon. | Free chapter; books paid | 2012 | Opened | [Polish visual details](../skills/polish-visual-details/SKILL.md) |
+| U100 | [Crafting a Design Persona](https://alistapart.com/article/crafting-a-design-persona/) — Meg Dickey-Kurdziolek (A List Apart) | Article · 5, 6 | **Practice.** | Write traits as "X but not Y", for example "playful, but not distracting". | Free | 2015 | Opened | [Polish visual details](../skills/polish-visual-details/SKILL.md) |
+| U101 | [Radix Colors: understanding the scale](https://www.radix-ui.com/colors/docs/palette-composition/understanding-the-scale) — WorkOS / Radix | Docs · 5, 8 | **Practice.** Widely used open-source colour system. | 12 steps, each with a job: backgrounds 1–2, component states 3–5, borders 6–8, solid fills 9–10, text 11–12. | Free | Current | Opened | [Polish visual details](../skills/polish-visual-details/SKILL.md) |
+| U102 | [Building your color palette](https://www.refactoringui.com/previews/building-your-color-palette) — Adam Wathan & Steve Schoger | Book preview · 5 | **Practice.** | 8–10 greys and about 9 shades per colour. Start from a base that works as a button background, then pick the darkest and lightest in real use. | Free preview; book paid | Undated | Opened | [Polish visual details](../skills/polish-visual-details/SKILL.md) |
+| U103 | [Color in UI Design: A (Practical) Framework](https://www.learnui.design/blog/color-in-ui-design-a-practical-framework.html) — Erik D. Kennedy | Article · 5 | **Practice.** | Darker shades: lower brightness, raise saturation. Lighter shades: the opposite. | Free | Updated Jun 2024 | Opened | [Polish visual details](../skills/polish-visual-details/SKILL.md) |
+| U104 | [Designing accessible color systems](https://stripe.com/blog/accessible-color-systems) — Daryl Koopersmith & Wilson Miner, Stripe | Article · 5, 7 | **Practice.** Describes Stripe's production colour system. | Build scales in a perceptually even colour space. Colours five levels apart pass small-text contrast; four apart pass for icons and large text. | Free | Oct 2019 | Opened | [Polish visual details](../skills/polish-visual-details/SKILL.md) |
+| U105 | [Designing Beautiful Shadows in CSS](https://www.joshwcomeau.com/css/designing-shadows/) — Josh W. Comeau | Article · 5 | **Practice.** | One light source, layered shadows, tinted toward the background, larger and softer at higher elevation. | Free | 2021, updated 2026 | Opened | [Polish visual details](../skills/polish-visual-details/SKILL.md) |
+| U106 | [Elevation](https://atlassian.design/foundations/elevation) — Atlassian Design System | Guideline · 5, 8 | **Practice.** | Four levels: sunken, default, raised, overlay. Each raised or overlay surface uses its matching shadow token. | Free | Current | Opened | [Polish visual details](../skills/polish-visual-details/SKILL.md) |
+| U107 | [The Role of Animation and Motion in UX](https://www.nngroup.com/articles/animation-purpose-ux/) — Page Laubheimer, NN/g | Article · 5, 7 | **Practice.** | Animate for feedback, state change, spatial navigation or signifiers. Keep it brief and subtle. | Free | Jan 2020 | Opened | [Polish visual details](../skills/polish-visual-details/SKILL.md) |
+| U108 | [Executing UX Animations: Duration and Motion Characteristics](https://www.nngroup.com/articles/animation-duration/) — Page Laubheimer, NN/g | Article · 5 | **Practice.** | Simple feedback about 100 ms; most animations 100–500 ms; at 500 ms they feel like a drag. Ease-out for most motion. | Free | Feb 2020 | Opened | [Polish visual details](../skills/polish-visual-details/SKILL.md) |
+| U109 | [Motion](https://carbondesignsystem.com/elements/motion/overview/) — IBM Carbon | Guideline · 5, 8 | **Practice.** | Productive motion for tasks, expressive for significant moments. Duration tokens from 70 ms to 700 ms, with easing curves. | Free | Updated Aug 2026 | Opened | [Polish visual details](../skills/polish-visual-details/SKILL.md) |
+| U110 | [Motion](https://developer.apple.com/design/human-interface-guidelines/motion) — Apple HIG | Platform guideline · 5, 7 | **Practice.** | Motion has a purpose, is never the only carrier of information, is avoided on frequent interactions, and can be interrupted. | Free (read via JSON) | Sep 2025 | Opened | [Polish visual details](../skills/polish-visual-details/SKILL.md) |
+| U111 | [Microinteractions in User Experience](https://www.nngroup.com/articles/microinteractions/) — Alita Kendrick, NN/g | Article · 5, 9 | **Practice.** | A trigger and its feedback. Use them to show status, prevent errors and express personality. | Free | Oct 2018 | Opened | [Polish visual details](../skills/polish-visual-details/SKILL.md) |
+| U112 | [Icons](https://developer.apple.com/design/human-interface-guidelines/icons) — Apple HIG | Platform guideline · 5 | **Practice.** | Consistent size, detail and stroke; match stroke to adjacent text weight; balance icons optically. | Free (read via JSON) | Current | Opened | [Polish visual details](../skills/polish-visual-details/SKILL.md) |
+| U113 | [Icon usage](https://carbondesignsystem.com/elements/icons/usage/) — IBM Carbon | Guideline · 5, 7 | **Practice.** | 16px icons with 14px text, 20px with 16px. Centre icons vertically against text; pad interactive icons to 44px. | Free | Current | Opened | [Polish visual details](../skills/polish-visual-details/SKILL.md) |
+| U114 | [Avatar](https://primer.style/product/components/avatar/) — GitHub Primer | Guideline · 5, 8 | **Practice.** | Circles for people, squares for teams, organisations and bots. Fixed sizes from 16 to 64px. Alt text when no name is shown. | Free | Current | Opened | [Polish visual details](../skills/polish-visual-details/SKILL.md) |
+| U115 | [Avatar usage](https://atlassian.design/components/avatar/usage) — Atlassian Design System | Guideline · 5, 8 | **Practice.** | Circle for people, hexagon for AI agents, square for projects. Always show a default image. | Free | Current | Opened | [Polish visual details](../skills/polish-visual-details/SKILL.md) |
+| U116 | [Skeleton Screens 101](https://www.nngroup.com/articles/skeleton-screens/) — NN/g | Article · 4, 5 | **Practice.** | No indicator under 1 s; skeleton for a page or spinner for a module at 2–10 s; progress bar beyond that. | Free | Jun 2023 | Opened | [Polish visual details](../skills/polish-visual-details/SKILL.md) |
 
 ## Ranking for turning into agent-readable guidance
 
@@ -337,3 +364,44 @@ Pages were read through a fetch summariser. The 28% figure in U87 was checked ag
 - Local links resolve.
 
 This is structural validation only.
+
+### polish-visual-details (2026-10-08)
+
+[Polish visual details](../skills/polish-visual-details/SKILL.md), with a [polish tokens reference](../skills/polish-visual-details/references/polish-tokens.md).
+
+The user asked for a skill grounded in published guidelines rather than an invented redesign workflow, with no single screen type as its focus.
+
+**Primary sources:**
+- **U97–U98:** why polish matters and where it comes in the order of work.
+- **U101–U106:** colour and depth.
+- **U107–U110:** motion.
+- **U112–U116:** icons, avatars and loading.
+
+**Supporting sources:**
+- U16 Refactoring UI
+- U17 Kennedy
+- U26 WCAG contrast
+- U34 reduced motion
+- U49 Mailchimp voice and tone
+- U99–U100 personality
+- U111 microinteractions
+
+Pages were read through a fetch summariser on 2026-10-08. Checked directly against the page text:
+- Stripe's "five levels apart" rule
+- NN/g's 100–500 ms range and the "real drag" wording at 500 ms
+- the skeleton screens article's publication date
+
+**Disagreements kept visible:**
+- Radix states contrast in APCA, while Stripe and WCAG use WCAG 2 ratios.
+- Carbon pads icons to 44px, while WCAG AA needs 24px.
+- Primer uses squares for AI agents, Atlassian hexagons.
+
+**Our synthesis:**
+- The ordering principle "polish only what is already usable". NN/g and Walter state it; applying it as the skill's first gate is our choice.
+- Picking one source per token category.
+
+**Gaps:**
+- Material elevation and motion pages could not be read.
+- No free primary text was found for Walter's hierarchy itself, Saffer's *Microinteractions*, or Refactoring UI's chapters on personality, depth and borders.
+
+**Validation:** recorded in the PR.
