@@ -126,16 +126,19 @@ export function parseCurrencyCode(raw: string): CurrencyCode | null {
 export type Money = { readonly minor: bigint; readonly currency: CurrencyCode };
 
 // For monetary amounts (line amounts, totals): "111.00" in DKK → 11100 minor units.
-// Rejects more decimals than the currency has. Unit prices may carry more
-// decimals and need their own parser with a wider scale.
+// Trailing zeros beyond the currency's minor units are accepted, because a
+// document profile may fix its own wire scale (Peppol writes two decimals in
+// every currency, so "100.00" JPY is valid); non-zero digits beyond the minor
+// units are rejected. Unit prices may carry more decimals and need their own
+// parser with a wider scale.
 export function parseMoney(amount: string, currency: CurrencyCode): Money | null {
   const m = /^(-?)(\d+)(?:\.(\d+))?$/.exec(amount.trim());
   if (!m) return null;
   const scale = minorUnits[currency];
   if (scale === undefined) return null;
   const fraction = m[3] ?? '';
-  if (fraction.length > scale) return null;
-  const minor = BigInt(m[2] + fraction.padEnd(scale, '0')) * (m[1] === '-' ? -1n : 1n);
+  if (/[1-9]/.test(fraction.slice(scale))) return null;
+  const minor = BigInt(m[2] + fraction.slice(0, scale).padEnd(scale, '0')) * (m[1] === '-' ? -1n : 1n);
   return { minor, currency };
 }
 
@@ -145,7 +148,7 @@ export function addMoney(a: Money, b: Money): Money {
 }
 ```
 
-`BigInt` keeps large totals exact; a `DECIMAL` column or a decimal library is the same idea in the database. Rejecting `0.001` in a two-decimal currency at parse time is deliberate for amounts: a provider that sends three decimals on a line amount in a two-decimal currency has either a different rounding rule or a defect, and either deserves a mapping decision rather than a rounding default. Unit prices are the exception and get a wider scale.
+`BigInt` keeps large totals exact; a `DECIMAL` column or a decimal library is the same idea in the database. Rejecting `0.001` in a two-decimal currency at parse time is deliberate for amounts: a provider that sends a non-zero third decimal on a line amount in a two-decimal currency has either a different rounding rule or a defect, and either deserves a mapping decision rather than a rounding default. Trailing zeros are different: the document profile's wire scale (two decimals for every currency in Peppol) is not the currency's minor unit, so `100.00` in JPY parses to 100 minor units. Unit prices are the exception and get a wider scale.
 
 ## Checks worth running
 
@@ -153,4 +156,4 @@ export function addMoney(a: Money, b: Money): Money {
 - `parseGtin('5790000435968')` returns `'05790000435968'`; `gtinWithoutFillerZeros` gives back the 13-digit form, and a GTIN-12 such as `036000291452` keeps its leading zero.
 - `parseIban('GB82 WEST 1234 5698 7654 32')` returns `'GB82WEST12345698765432'`; changing one digit returns `null`, and so does a country code that is not in the registry table even when the checksum happens to hold.
 - `parsePlainDate('2026-10-09')` returns `{ year: 2026, month: 10, day: 9 }`; `parsePlainDate('20261009')` and `parsePlainDate('2026-02-30')` return `null`.
-- `parseMoney('111.00', 'DKK')` has `minor === 11100n`; `parseMoney('100', 'JPY')` has `minor === 100n`; `parseMoney('1.005', 'DKK')` returns `null`.
+- `parseMoney('111.00', 'DKK')` has `minor === 11100n`; `parseMoney('100', 'JPY')` and `parseMoney('100.00', 'JPY')` have `minor === 100n`; `parseMoney('1.005', 'DKK')` and `parseMoney('1.50', 'JPY')` return `null`.
