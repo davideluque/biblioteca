@@ -41,7 +41,7 @@ Choose the key from the document, not from the transport:
 - EDIFACT: the interchange sender plus the interchange control reference, which the syntax guidelines describe as the unique reference for the transmission allocated by the sender; the message reference number within the interchange for per-message tracking.
 - AS4: the message id. The profile says duplicate detection relies only on it, and a resent message must keep the same id.
 - Peppol UBL: the envelope instance identifier, which the Message Level Response references.
-- A file drop with no envelope: the file name is a weak key. Camel's default idempotent key is the absolute path with name plus size as the suggested alternative; Spring keys on name plus remote modification time. Prefer a document identifier from inside the file (document number plus sender) and keep the file-level key as a second check.
+- A file drop with no envelope: the file name is a weak key. Camel's default idempotent key is the absolute path with name plus size as the suggested alternative; Spring keys on name plus remote modification time. Prefer a document identifier from inside the file, always paired with the sender, because one provider can carry documents from several partners who allocate the same numbers; keep the file-level key as a second check.
 
 Keep the seen-keys store persistent and shared across instances; both Camel and Spring warn that an in-memory store is only for a single process that never restarts. Decide how long keys are kept; AS4 leaves the window to the implementation, so write yours down.
 
