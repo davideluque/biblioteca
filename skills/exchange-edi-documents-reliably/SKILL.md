@@ -79,9 +79,9 @@ A provider drops `ORDERS_<n>.xml` files containing one or more order documents a
 3. Copies the bytes to object storage keyed by the intake id before parsing anything.
 4. Parses the file. A parse failure sets status `unreadable`, keeps the file in a `failed/` folder on the server and opens an alert; nothing is deleted.
 5. Validates each document and records findings with severity. Fatal findings mark that document `rejected` with its findings; warnings are stored and the document continues.
-6. Writes accepted documents into `orders` keyed by `(provider, document_number)`, branching on the document's message function: an original or replacement updates the row, a duplicate changes nothing, a cancellation marks the order cancelled. A change to an order that the application has already accepted is recorded as a finding for a person, not applied.
-7. Deletes the file from the server only after step 6 commits.
-8. Creates the business answer the agreement defines (an order response, or a rejection with reasons) as a row with its own id and status `pending`, linked to the intake row, before the first send attempt; then sends it and records each attempt and its outcome on that row. A retry after a crash finds the pending row and resends the same answer with the same id.
+6. In one transaction, writes accepted documents into `orders` keyed by `(provider, sender, document_number)`, branching on the document's message function (an original or replacement updates the row, a duplicate changes nothing, a cancellation marks the order cancelled), and creates the business answer the agreement defines (an order response, or a rejection with reasons) as a row with its own id and status `pending`, linked to the intake row. A change to an order that the application has already accepted is recorded as a finding for a person, not applied.
+7. Deletes the file from the server only after step 6 commits. From here on the pending answer row, not the file, is what a retry resumes from.
+8. Sends the pending answer and records each attempt and its outcome on its row. A retry after a crash finds the pending row and resends the same answer with the same id.
 
 Nothing in this sequence sends a transport receipt, because an SFTP drop has none; if the exchange later moves to AS2 or AS4, the receipt is added at step 1 and the message id becomes the intake key in step 2.
 
