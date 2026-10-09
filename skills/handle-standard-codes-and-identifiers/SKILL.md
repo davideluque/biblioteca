@@ -80,7 +80,7 @@ A provider's flattened invoice XML arrives with line fields `Gtin`, `Quantity`, 
 | Field | Column | Check at the boundary |
 | --- | --- | --- |
 | `InvoiceDate` | `invoice_date DATE` | Extended ISO date only; never through a timestamp parser |
-| `Currency` + amounts | `currency CHAR(3)`, `line_amount_minor BIGINT`, `net_unit_price DECIMAL(19,6)` | Code in the current ISO 4217 list; the amount is converted to minor units with that currency's exponent (two for DKK, three for BHD, four for CLF); unit prices keep a wider fixed scale |
+| `Currency` + amounts | `currency CHAR(3)`, `line_amount DECIMAL(19,4)`, `line_amount_minor BIGINT NULL`, `net_unit_price DECIMAL(19,6)` | Code in the current ISO 4217 list; `line_amount` keeps the value at the document profile's scale (four decimals hold every ISO currency); `line_amount_minor` is filled only when the amount converts exactly to the currency's minor units and stays empty, with a finding, when it does not (1.50 JPY); unit prices keep a wider fixed scale |
 | `SupplierGln` | `supplier_gln CHAR(13)` + `supplier_gln_scheme = '0088'` | 13 digits, check digit valid, stored as text |
 | `Gtin` | `gtin CHAR(14)` | Zero-filled to 14, check digit valid; raw value kept in `raw_document` |
 | `UnitCode` | `unit_code VARCHAR(3)` | In the Rec 20/21 list, or mapped from the partner's documented code |
