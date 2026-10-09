@@ -103,8 +103,8 @@ export function parseEdifactDate102(raw: string): PlainDate | null {
 }
 
 export function toIsoDate(d: PlainDate): string {
-  const pad = (n: number) => String(n).padStart(2, '0');
-  return `${d.year}-${pad(d.month)}-${pad(d.day)}`;
+  const pad = (n: number, width: number) => String(n).padStart(width, '0');
+  return `${pad(d.year, 4)}-${pad(d.month, 2)}-${pad(d.day, 2)}`;
 }
 ```
 
