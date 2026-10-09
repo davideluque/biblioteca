@@ -29,12 +29,12 @@ An interchange can carry many messages, and a file from a provider can carry man
 | --- | --- | --- | --- | --- |
 | Buyer (party sold to) | BY | BuyerCustomerParty | AccountingCustomerParty | Mandatory |
 | Supplier or seller | SU in EANCOM; some guides use SE (seller) | SellerSupplierParty | AccountingSupplierParty | Mandatory |
-| Delivery party or address | DP | Delivery / DeliveryParty, DeliveryLocation | Delivery / DeliveryParty | Same as buyer |
-| Invoicee (party invoiced) | IV | AccountingCustomerParty | (the buyer) | Same as buyer |
-| Invoice issuer | II | — | — | Same as supplier |
+| Delivery party or address | DP | Delivery / DeliveryParty, DeliveryLocation | Delivery / DeliveryParty | EDIFACT: same as buyer. UBL: unknown, see below |
+| Invoicee (party invoiced) | IV | AccountingCustomerParty | (the buyer) | EDIFACT: same as buyer |
+| Invoice issuer | II | — | — | EDIFACT: same as supplier |
 | Payee | PE | — | PayeeParty | Same as supplier; Peppol notes a payee usually means factoring |
 
-EANCOM states that invoicee and delivery party are given only when they differ from the buyer, and the invoice issuer only when it differs from the supplier. Fill the defaults in your mapping so downstream code never has to ask whether the invoicee is empty. In EANCOM each party normally carries a GLN; a header delivery party is the default and a line may override it.
+EANCOM states that invoicee and delivery party are given only when they differ from the buyer, and the invoice issuer only when it differs from the supplier, so in EDIFACT an absent party has a defined meaning: fill those defaults in your mapping so downstream code never has to ask whether the invoicee is empty. UBL is different: an invoice may leave out details already established by the order or despatch advice it references. There, an absent delivery party means "see the referenced document", not "the buyer"; resolve it from that document or store it as unknown, and never invent a destination. In EANCOM each party normally carries a GLN; a header delivery party is the default and a line may override it.
 
 Providers that flatten EDIFACT into XML often name fields after the role (buyer GLN, supplier GLN, delivery GLN, invoicee GLN). Map those names back to the roles above rather than inventing a fourth party model.
 
