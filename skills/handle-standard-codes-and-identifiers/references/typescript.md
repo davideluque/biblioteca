@@ -54,7 +54,8 @@ Branded string types (`Gln`, `Gtin14`) cost nothing at runtime and stop a plain 
 ## IBAN (ISO 13616, mod 97-10)
 
 ```ts
-// Registered lengths for a few countries; extend from the IBAN registry.
+// Registered lengths for a few countries. Load the full IBAN registry in real use:
+// a country missing from this table is rejected, not waved through.
 const ibanLengths: Record<string, number> = { DK: 18, DE: 22, SE: 24, NO: 15, NL: 18, GB: 22, FR: 27, BE: 16 };
 
 export type Iban = string & { readonly __brand: 'Iban' };
@@ -63,7 +64,7 @@ export function parseIban(raw: string): Iban | null {
   const value = raw.replace(/\s+/g, '').toUpperCase();
   if (!/^[A-Z]{2}\d{2}[A-Z0-9]{1,30}$/.test(value)) return null;
   const expected = ibanLengths[value.slice(0, 2)];
-  if (expected !== undefined && value.length !== expected) return null;
+  if (expected === undefined || value.length !== expected) return null;
   const rearranged = value.slice(4) + value.slice(0, 4);
   const numeric = rearranged.replace(/[A-Z]/g, (c) => String(c.charCodeAt(0) - 55));
   let remainder = 0;
@@ -150,6 +151,6 @@ export function addMoney(a: Money, b: Money): Money {
 
 - `gs1CheckDigit('629104150021')` is `3` (GS1's own worked example); `parseGln('6291041500213')` returns the key and `parseGln('6291041500214')` returns `null`.
 - `parseGtin('5790000435968')` returns `'05790000435968'`; `gtinWithoutFillerZeros` gives back the 13-digit form, and a GTIN-12 such as `036000291452` keeps its leading zero.
-- `parseIban('GB82 WEST 1234 5698 7654 32')` returns `'GB82WEST12345698765432'`; changing one digit returns `null`.
+- `parseIban('GB82 WEST 1234 5698 7654 32')` returns `'GB82WEST12345698765432'`; changing one digit returns `null`, and so does a country code that is not in the registry table even when the checksum happens to hold.
 - `parsePlainDate('2026-10-09')` returns `{ year: 2026, month: 10, day: 9 }`; `parsePlainDate('20261009')` and `parsePlainDate('2026-02-30')` return `null`.
 - `parseMoney('111.00', 'DKK')` has `minor === 11100n`; `parseMoney('100', 'JPY')` has `minor === 100n`; `parseMoney('1.005', 'DKK')` returns `null`.
