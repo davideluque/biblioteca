@@ -94,7 +94,7 @@ The raw document is stored once, unchanged, next to the mapped rows.
 
 ## Judge the result
 
-- Take a document with a delivery party and one without. Does the delivery address resolve to the buyer in the second case without a null check downstream?
+- Take an EDIFACT document without a delivery party. Does the delivery address resolve to the buyer without a null check downstream? Then take a UBL invoice without one. Is the delivery party taken from the referenced order or despatch advice, or stored as unknown, rather than set to the buyer?
 - Take a credit note and a negative-total invoice. Does the mapping find the invoice each one corrects, and do both end up with the credit effect your model decided on while the record still shows the received type?
 - Change one line amount by a cent. Does a totals check report it, naming the line?
 - Ask what "accepted" means for an order in the model. If an order can be marked accepted by an invoice or an acknowledgement rather than by an order response, the lifecycle has been collapsed.
