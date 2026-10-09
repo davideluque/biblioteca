@@ -86,7 +86,7 @@ A provider delivers orders as flattened XML with `OrderNumber`, `OrderDate`, `De
 
 - `external_order_id` = `OrderNumber`, unique together with the channel and the buyer's GLN, because one channel can carry orders from several buyers who allocate the same numbers; `supplier_order_id` stays empty until the order response assigns one.
 - `order_date` = `OrderDate` as a calendar date (qualifier 137); `requested_delivery_date` = `DeliveryDate` (qualifier 2), nullable.
-- `buyer_gln` = `BuyerGln`; `delivery_gln` = `DeliveryGln` or the buyer's GLN when empty; `invoicee_gln` = buyer's GLN because the document has no invoicee.
+- `buyer_gln` = `BuyerGln`; `delivery_gln` = `DeliveryGln`. A flattened format does not say which convention an empty field follows, so the buyer's GLN is used for an empty delivery party, and for the missing invoicee, only when the provider's documentation states the EANCOM convention; otherwise the field stays empty and the order is flagged for the delivery address to be confirmed.
 - Each line: `line_number` = `LineNumber`, `gtin` = `Gtin`, `ordered_quantity` = `Quantity` with `unit_code`, `net_unit_price` and `line_amount` in `Currency`; because this format has no base quantity and no line allowances, the mapping checks `line_amount = ordered_quantity × net_unit_price` and records a finding when it does not hold.
 - The order's status is "received"; nothing in this document says the seller accepted it. Acceptance is recorded when the order response arrives and is keyed back by `OrderNumber` and `LineNumber`.
 
