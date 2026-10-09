@@ -123,32 +123,43 @@ export function parseCurrencyCode(raw: string): CurrencyCode | null {
   return value in minorUnits ? (value as CurrencyCode) : null;
 }
 
-export type Money = { readonly minor: bigint; readonly currency: CurrencyCode };
+// An exact decimal: units × 10^-scale, with the currency it is in.
+export type Money = { readonly units: bigint; readonly scale: number; readonly currency: CurrencyCode };
 
-// For monetary amounts (line amounts, totals): "111.00" in DKK → 11100 minor units.
-// Trailing zeros beyond the currency's minor units are accepted, because a
-// document profile may fix its own wire scale (Peppol writes two decimals in
-// every currency, so "100.00" JPY is valid); non-zero digits beyond the minor
-// units are rejected. Unit prices may carry more decimals and need their own
-// parser with a wider scale.
-export function parseMoney(amount: string, currency: CurrencyCode): Money | null {
+// For monetary amounts (line amounts, totals). `scale` is the number of
+// decimals the document profile allows; Peppol, for instance, allows two in
+// every currency, so pass 2 there. It defaults to the currency's minor units.
+// More decimals than the scale are rejected. Unit prices may carry more
+// decimals and need a wider scale.
+export function parseMoney(amount: string, currency: CurrencyCode, scale = minorUnits[currency]): Money | null {
+  if (scale === undefined) return null;
   const m = /^(-?)(\d+)(?:\.(\d+))?$/.exec(amount.trim());
   if (!m) return null;
-  const scale = minorUnits[currency];
-  if (scale === undefined) return null;
   const fraction = m[3] ?? '';
-  if (/[1-9]/.test(fraction.slice(scale))) return null;
-  const minor = BigInt(m[2] + fraction.slice(0, scale).padEnd(scale, '0')) * (m[1] === '-' ? -1n : 1n);
-  return { minor, currency };
+  if (fraction.length > scale) return null;
+  const units = BigInt(m[2] + fraction.padEnd(scale, '0')) * (m[1] === '-' ? -1n : 1n);
+  return { units, scale, currency };
+}
+
+// Converts to the currency's minor units for payment or ledger posting.
+// Returns null when the amount is more precise than the currency allows
+// (1.50 JPY is valid in a Peppol invoice but cannot be paid as yen).
+export function toMinorUnits(money: Money): bigint | null {
+  const minor = minorUnits[money.currency];
+  if (minor === undefined) return null;
+  if (money.scale <= minor) return money.units * 10n ** BigInt(minor - money.scale);
+  const factor = 10n ** BigInt(money.scale - minor);
+  return money.units % factor === 0n ? money.units / factor : null;
 }
 
 export function addMoney(a: Money, b: Money): Money {
   if (a.currency !== b.currency) throw new Error(`currency mismatch: ${a.currency} vs ${b.currency}`);
-  return { minor: a.minor + b.minor, currency: a.currency };
+  if (a.scale !== b.scale) throw new Error(`scale mismatch: ${a.scale} vs ${b.scale}`);
+  return { units: a.units + b.units, scale: a.scale, currency: a.currency };
 }
 ```
 
-`BigInt` keeps large totals exact; a `DECIMAL` column or a decimal library is the same idea in the database. Rejecting `0.001` in a two-decimal currency at parse time is deliberate for amounts: a provider that sends a non-zero third decimal on a line amount in a two-decimal currency has either a different rounding rule or a defect, and either deserves a mapping decision rather than a rounding default. Trailing zeros are different: the document profile's wire scale (two decimals for every currency in Peppol) is not the currency's minor unit, so `100.00` in JPY parses to 100 minor units. Unit prices are the exception and get a wider scale.
+`BigInt` keeps large totals exact; a `DECIMAL` column or a decimal library is the same idea in the database. Parsing and conversion are two steps on purpose. The document profile decides how many decimals an amount may carry on the wire, and that is not the currency's minor unit: Peppol allows two decimals in every currency, so `1.50` JPY is a valid Peppol amount and `1.234` BHD is not. Converting to minor units is a separate decision that can fail, and a failure there (fractional yen) is a finding for a person, not something to round away. Unit prices are the exception and get a wider scale.
 
 ## Checks worth running
 
@@ -156,4 +167,5 @@ export function addMoney(a: Money, b: Money): Money {
 - `parseGtin('5790000435968')` returns `'05790000435968'`; `gtinWithoutFillerZeros` gives back the 13-digit form, and a GTIN-12 such as `036000291452` keeps its leading zero.
 - `parseIban('GB82 WEST 1234 5698 7654 32')` returns `'GB82WEST12345698765432'`; changing one digit returns `null`, and so does a country code that is not in the registry table even when the checksum happens to hold.
 - `parsePlainDate('2026-10-09')` returns `{ year: 2026, month: 10, day: 9 }`; `parsePlainDate('20261009')` and `parsePlainDate('2026-02-30')` return `null`.
-- `parseMoney('111.00', 'DKK')` has `minor === 11100n`; `parseMoney('100', 'JPY')` and `parseMoney('100.00', 'JPY')` have `minor === 100n`; `parseMoney('1.005', 'DKK')` and `parseMoney('1.50', 'JPY')` return `null`.
+- `parseMoney('111.00', 'DKK')` has `units === 11100n` at scale 2; `parseMoney('1.005', 'DKK')` returns `null`.
+- With Peppol's scale, `parseMoney('1.50', 'JPY', 2)` parses but `toMinorUnits` returns `null`; `parseMoney('100.00', 'JPY', 2)` converts to `100n` yen; `parseMoney('1.234', 'BHD', 2)` returns `null`.

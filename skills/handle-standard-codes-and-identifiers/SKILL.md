@@ -32,6 +32,7 @@ Decide for each field whether it is a **calendar date** (order date, delivery da
 - Store amounts as decimals (`DECIMAL(p, s)`, `BigDecimal`) or as integers in the currency's minor unit. Never binary floating point. The minor-unit scale applies to monetary amounts (line amounts, totals, amounts due); a unit price may legitimately carry more decimals than the currency, so give unit prices their own, wider scale.
 - The number of decimals is a property of the currency, not a constant: ISO 4217 List One (maintained by SIX) gives DKK, EUR and USD 2 minor units, JPY and ISK 0, BHD 3, CLF 4, and precious metals none. Look the exponent up from a table you control and refresh it when SIX publishes an amendment; currencies are created, withdrawn and replaced.
 - Even that table is not universal. Stripe, for instance, requires ISK amounts with two decimals and pays out HUF as a zero-decimal currency. When a provider's API differs from ISO, convert at that provider's adapter and say so in the code.
+- A document profile can fix its own scale as well. Peppol allows at most two decimals on monetary amounts in every currency, so a valid Peppol invoice can say `1.50` JPY and cannot say `1.234` BHD. Parse at the profile's scale, and convert to the currency's minor units as a separate step that can fail; a failure there is a finding, not a rounding.
 - Normalise codes to three upper-case letters before storing or comparing, and validate against the current list.
 
 ## Country codes
